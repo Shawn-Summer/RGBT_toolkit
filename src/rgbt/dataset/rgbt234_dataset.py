@@ -177,3 +177,12 @@ class RGBT234(BaseRGBTDataet):
         if filename!=None:
             plotSetting.filename = filename
         return super().plot(metric_fun=metric_fun, seqs=seqs, plotSetting=plotSetting)
+
+
+    def draw_plot(self, metric_fun, seqs=None, plotSetting=None):
+        if metric_fun == self.MPR:
+            return self.mpr_plot(seqs=seqs, plotSetting=plotSetting)
+        elif metric_fun == self.MSR:
+            return self.msr_plot(seqs=seqs, plotSetting=plotSetting)
+        else:
+            raise ValueError(f"Unsupported metric_fun: {metric_fun}")

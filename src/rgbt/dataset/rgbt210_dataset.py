@@ -145,3 +145,12 @@ class RGBT210(BaseRGBTDataet):
         if filename!=None:
             plotSetting.filename = filename
         return super().plot(metric_fun=metric_fun, seqs=seqs, plotSetting=plotSetting)
+
+
+    def draw_plot(self, metric_fun, seqs=None, plotSetting=None):
+        if metric_fun == self.PR:
+            return self.pr_plot(seqs=seqs, plotSetting=plotSetting)
+        elif metric_fun == self.SR:
+            return self.sr_plot(seqs=seqs, plotSetting=plotSetting)
+        else:
+            raise ValueError(f"Unsupported metric_fun: {metric_fun}")
