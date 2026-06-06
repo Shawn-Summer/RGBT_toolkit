@@ -37,7 +37,7 @@ def draw_radar(result:list, attrs:list, fn:str, title=''):
     ax.set_thetagrids(angles[:-1] * 180/np.pi, attr_value)
     ax.spines['polar'].set_visible(False)
     ax.legend(loc='upper center', bbox_to_anchor=(0.5,-0.07), frameon=False, ncol=5)
-    ax.grid(b=True, c='gray', linestyle='--')
+    ax.grid(visible=True, c='gray', linestyle='--')
     # ax.set_ylim(np.min(min_value)-0.05, np.max(max_value)+0.05)
     ax.set_rlim(np.min(min_value)-0.04, np.max(max_value)+0.02)
     ax.set_title(title)
