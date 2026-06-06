@@ -51,6 +51,6 @@ for tracker in sorted(mpr_dict.keys()):
 # sr_tc_dict = rgbt234.MSR(seqs=rgbt234.TC)
 
 # 绘图功能
-rgbt234.draw_plot(metric_fun=rgbt234.MPR)
-rgbt234.draw_plot(metric_fun=rgbt234.MSR)
+# rgbt234.draw_plot(metric_fun=rgbt234.MPR)
+# rgbt234.draw_plot(metric_fun=rgbt234.MSR)
 rgbt234.draw_attributeRadar(metric_fun=rgbt234.MSR)

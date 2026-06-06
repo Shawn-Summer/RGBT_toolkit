@@ -142,7 +142,7 @@ class RGBT234(BaseRGBTDataet):
             return res
 
 
-    def draw_attributeRadar(self, metric_fun, filename:str=''):
+    def draw_attributeRadar(self, metric_fun, filename=None):
         if filename==None:
             filename = self.name
             if metric_fun==self.MPR:
